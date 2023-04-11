@@ -152,7 +152,7 @@ local function ElunaReload(ev)-- Se ejecuta cada vez que Eluna Lua Engine hace r
 	CharDBExecute("CREATE TABLE IF NOT EXISTS `aa_cajero` ("
 		.."`name` VARCHAR(12), "
 		.."`player` INT(10) NOT NULL UNIQUE, "
-		.."`money` MEDIUMINT(20), "
+		.."`money` BIGINT(20), "
 		.."`send` VARCHAR(12) DEFAULT NULL)")
 end-----------------------------------------------------------------------------------------------------
 
