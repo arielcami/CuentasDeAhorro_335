@@ -1,4 +1,4 @@
---		Ariel Camilo / 11 de Abril 2023
+-- Ariel Camilo / 11 de Abril 2023
 
 
 NPC_ID = 00000 --> Asigna el ID del NPC que correrá este Script.
