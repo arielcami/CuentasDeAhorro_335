@@ -76,7 +76,7 @@ local function MenuClick(e,P,U,S,I,C)     N, g = P:GetName(), P:GetGUIDLow() --x
 		Q=CharDBQuery("SELECT * FROM `aa_cajero` WHERE `name` = '"..C.."'") --> Valida si existe un registro con el nombre que se ha entrado.
 		
 		if Q then  --> Si existe registro...
-			if C==N then --> Si se escribe el nombre propio.
+			if string.lower(C) == string.lower(N) then --> Convierte a minúsculas el nombre introducido y el nombre del jugador, y los compara.
 				bc("|cffff0000Error: |rNo puedes transferirte dinero a ti mismo.") gc() return				 
 			end 
 			P:GossipMenuAddItem(0, i._1..'Transferir oro a: '..string.upper(C), 50, 50, true, "Escribe el monto en números positivos enteros.")
