@@ -177,10 +177,10 @@ end--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 local function ElunaReload(ev)-- Se ejecuta cada vez que Eluna Lua Engine hace reload. -----------------
 	CharDBExecute("CREATE TABLE IF NOT EXISTS `aa_cajero` ("
-		.."`name` VARCHAR(12), "
-		.."`player` INT(10) NOT NULL UNIQUE, "
-		.."`money` BIGINT(20), "
-		.."`send` VARCHAR(12) DEFAULT NULL)")
+		.."`name` VARCHAR(16), "
+		.."`player` MEDIUMINT UNSIGNED NOT NULL UNIQUE, "
+		.."`money` INT UNSIGNED, "
+		.."`send` VARCHAR(16) DEFAULT NULL)")
 end-----------------------------------------------------------------------------------------------------
 
 RegisterCreatureGossipEvent(NPC_ID, 1, Click)  RegisterCreatureGossipEvent(NPC_ID, 2, MenuClick)  RegisterServerEvent(33, ElunaReload) 
